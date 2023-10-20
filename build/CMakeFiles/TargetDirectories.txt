@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/Kelvin/build/CMakeFiles/kelvin.dir
+C:/Users/User/Desktop/Kelvin/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/User/Desktop/Kelvin/build/CMakeFiles/ZERO_CHECK.dir
