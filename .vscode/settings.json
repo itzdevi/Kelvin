@@ -1,0 +1,9 @@
+{
+    "cmake.generator": "Visual Studio 17 2022",
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "*.rmd": "markdown",
+        "sdl.h": "c",
+        "stdio.h": "c"
+    }
+}
