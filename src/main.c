@@ -39,12 +39,17 @@ int main() {
          0.5, -0.5, 0.0
     };
 
+    unsigned int vao;
     unsigned int vbo;
+    glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
+
+    glBindVertexArray(vao);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
-    glVertexAttribPointer(0, sizeof(vertices), GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
 
     bool shouldQuit = false;
     while (!shouldQuit) {
@@ -56,7 +61,7 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.07, 0.07, 0.07, 1.0);
         
-        glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices));
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 
         SDL_GL_SwapWindow(window);
     }
